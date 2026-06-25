@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li class="nav__link click">
-                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">
+                    <a href="#" class="nav__link--anchor">
                         <i class="fa-solid fa-circle-half-stroke"></i>
                     </a>
                 </li>
@@ -68,8 +68,197 @@
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
-    </section>
-    
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <div class="modal__half__content">
+                    <p class="modal__title">Here's a bit about me.</p>
+                    <p class="modal__subtitle">Frontend Web Developer</p>
+                    <p class="modal__para">I'm a 28 year old <span class="text--emphasis">frontend web developer</span> from the midwest with a strong passion for developing websites with <span class="text--emphasis">great user experiences.</span></p>
+                    <p class="modal__para">I currently work on advanced engineering problems and learn from a team of some of the most <span class="text--emphasis">talented</span> and <span class="text--emphasis">experienced</span> engineers every day.</p>
+                    <div class="language__list">
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg" alt="HTML logo" class="language__img">
+                            </figure>
+                            <span class="language__name">HTML</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS logo" class="language__img">
+                            </figure>
+                            <span class="language__name">CSS</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/250px-Unofficial_JavaScript_logo_2.svg.png?utm_source=commons.wikimedia.org&utm_campaign=parser&utm_content=thumbnail" alt="JavaScript logo" class="language__img">
+                            </figure>
+                            <span class="language__name">JavaScript</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/960px-React-icon.svg.png" alt="React logo" class="language__img">
+                            </figure>
+                            <span class="language__name">React</span>
+                        </div>
+                        <!-- <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png" alt="HTML logo" class="language__img">
+                            </figure>
+                            <span class="language__name">HTML</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png" alt="HTML logo" class="language__img">
+                            </figure>
+                            <span class="language__name">HTML</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png" alt="HTML logo" class="language__img">
+                            </figure>
+                            <span class="language__name">HTML</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png" alt="HTML logo" class="language__img">
+                            </figure>
+                            <span class="language__name">HTML</span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <div class="modal__half__content">
+                    <p class="modal__title">Let's have a chat!</p>
+                    <p class="modal__subtitle">I'm currently open to new opportunities</p>
+                    <form class="modal__form" action="/submit-data" method="POST">
+                        <label for="form__name" class="input__title">Name</label>
+                        <input class="input__line" type="text" id="form__name" name="form__name" required></input>
+                        <label for="form__email" class="input__title">E-mail</label>
+                        <input class="input__line" type="email" id="form__email" name="form__email" required></input>
+                        <label for="form__message" class="input__title">Message</label>
+                        <textarea class="input__area" type="text" id="form__message" name="form__message" wrap="soft" required></textarea>
+                    </form>
+                </div>
+                    
+<!-- Video paused at 05:27, modal creation part 2 -->
 
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of my <span class="text--emphasis">projects</span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/loopit.png" class="project__img" alt="">
+                            <div class="project__description">
+                                <h3 class="project__description--title">Luxury Cruise Lines Microsites</h3>
+                            <h4 class="project__description--sub-title">
+                                Figma, Photoshop, Premier Pro, HTML, CSS
+                            </h4>
+                            <p class="project__description--para">
+                                Designed microsites for 4 luxury cruise lines to provide a cohesive and visually appealing online presence that effectively showcases each brand's unique offerings and attracted potential customers.
+                            </p>
+                            <div class="project__description--links">
+                                <a href="" class="project__description--link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github-alt"></i>
+                                </a>
+                                <a href="https://windstarcruisesale.com/" class="project__description--link" target="_blank">
+                                    <i class="fa-solid fa-link"></i>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/loopit.png" class="project__img" alt="">
+                            <div class="project__description">
+                                <h3 class="project__description--title">Luxury Cruise Lines Microsites</h3>
+                            <h4 class="project__description--sub-title">
+                                Figma, Photoshop, Premier Pro, HTML, CSS
+                            </h4>
+                            <p class="project__description--para">
+                                Designed microsites for 4 luxury cruise lines to provide a cohesive and visually appealing online presence that effectively showcases each brand's unique offerings and attracted potential customers.
+                            </p>
+                            <div class="project__description--links">
+                                <a href="" class="project__description--link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github-alt"></i>
+                                </a>
+                                <a href="https://windstarcruisesale.com/" class="project__description--link" target="_blank">
+                                    <i class="fa-solid fa-link"></i>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/loopit.png" class="project__img" alt="">
+                            <div class="project__description">
+                                <h3 class="project__description--title">Luxury Cruise Lines Microsites</h3>
+                            <h4 class="project__description--sub-title">
+                                Figma, Photoshop, Premier Pro, HTML, CSS
+                            </h4>
+                            <p class="project__description--para">
+                                Designed microsites for 4 luxury cruise lines to provide a cohesive and visually appealing online presence that effectively showcases each brand's unique offerings and attracted potential customers.
+                            </p>
+                            <div class="project__description--links">
+                                <a href="" class="project__description--link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github-alt"></i>
+                                </a>
+                                <a href="https://windstarcruisesale.com/" class="project__description--link" target="_blank">
+                                    <i class="fa-solid fa-link"></i>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row footer__row">
+            <a href="#" class="footer__anchor">
+                <figure>
+                    <img src="./assets/logo.svg" alt="logo" class="footer__logo">
+                </figure>
+                <span class="footer__logo--popper">
+                    Top <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </span>
+            </a>
+            <div class="footer__social--list">
+                <a href="https://google.com" target="blank" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                " >GitHub</a>
+                <a href="https://google.com" target="blank" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                " >LinkedIn</a>
+                <a href="mailto:mtanderson64@gmail.com" target="blank" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                " >Email</a>
+                <a href="./assets/anderson_mark_resume.pdf" target="blank" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                " >Resume</a>
+            </div>
+            <p>
+                &copy; 2026 Mark Anderson
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
