@@ -315,8 +315,7 @@ nav {
     background-color: #c74022;
 }
 
-.modal__overlay--loading {
-    background-color: #242424;
+.modal__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -325,8 +324,34 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: all 500ms;
+}
+
+.modal__overlay--loading {
+    background-color: #242424;
     font-size: 40px;
+    opacity: 0;
     z-index: -1;
+}
+
+.modal__overlay--success {
+    background-color: #1f3748;
+    font-size: 20px;
+    opacity: 0;
+    padding: 48px;
+    text-align: center;
+    line-height: 1.75;
+    z-index: -1;
+}
+
+.modal__overlay--visible {
+    opacity: 1;
+    z-index: 1;
+}
+
+.spinner__grow {
+    animation: grow__spinner 500ms infinite ease;
 }
 
 .fa-spinner {
@@ -342,6 +367,40 @@ nav {
         transform: rotate(360deg);
     }
 }
+
+@keyframes grow__spinner {
+    0% {
+        transform: scale(1.2);
+    }
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
+
+.exit {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    background-color: #00000044;
+    font-size: 24px;
+    z-index: 15;
+    padding: 6px 4px;
+    border-radius: 4px;
+}
+
+.exit:hover {
+    background-color: #00000086;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.822);
+
+}
+
 
 .header {
     position: absolute;
