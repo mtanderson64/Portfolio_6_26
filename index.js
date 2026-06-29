@@ -1,6 +1,24 @@
+let isModalOpen = false
+let contrastToggle = false
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle
+    if (contrastToggle) {
+        document.body.classList += " dark-theme"
+    }
+    else {
+        document.body.classList.remove("dark-theme")
+    }
+}
+
+
+
 // template_xyb4feo
 // service_q8rzjit
 // public API key.    OWK-6DazwWjbaMWPP
+
+
+
 
 function contact(event) {
     event.preventDefault()
@@ -30,3 +48,18 @@ function contact(event) {
         })
             
 }
+
+
+
+function toggleModal() {
+    if (isModalOpen) {
+        isModalOpen = !isModalOpen
+        return document.body.classList.remove("modal--open")
+    }
+
+    isModalOpen = !isModalOpen
+    document.body.classList += " modal--open"
+
+    //console.log('toggleModal()')
+}
+
