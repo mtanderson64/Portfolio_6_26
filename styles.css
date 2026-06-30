@@ -35,6 +35,7 @@ p {
 
 section {
     background-color: rgb(245, 245, 245);
+    margin-bottom: -2px;
 }
 
 
@@ -94,6 +95,7 @@ section {
     opacity: 1;
     visibility: visible;
     transition: all 600ms 400ms;
+    z-index: 2;
 }
 
 .modal--open .header {
@@ -117,8 +119,8 @@ section {
     justify-content: center;
     padding-right: 3px;
     z-index: 70;
-    box-shadow: 0 0 12px white;
-    outline: 2px solid rgba(255, 255, 255, 0.211);
+/*     box-shadow: 0 0 12px rgba(255, 255, 255, 0.236);
+    outline: 2px solid rgba(255, 255, 255, 0.11); */
     border: none;
 }
 
@@ -169,6 +171,8 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     height: 100px;
+    z-index: 2;
+    position: relative;
 }
 
 .nav__link--list {
@@ -472,6 +476,8 @@ nav {
 
 .shape {
     position: fixed;
+    opacity: 0.25;
+    filter: blur(0.25px);
 }
 
 .shape--0 {
@@ -569,6 +575,7 @@ nav {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
 }
 
 .scroll__icon {
@@ -606,6 +613,8 @@ nav {
     text-align: center;
     font-size: 48px;
     margin-bottom: 64px;
+    z-index: 2;
+    position: relative;
 }
 
 
@@ -626,6 +635,7 @@ nav {
     overflow: hidden;
     position: relative;
     justify-content: center;
+    background-color: rgb(245, 245, 245);
 }
 
 .project__wrapper:before {
@@ -702,6 +712,8 @@ nav {
 footer {
     background-color: #272c32;
     color: #fff;
+    z-index: 2;
+    position: relative;
 }
 
 .footer__row {
@@ -758,9 +770,59 @@ footer {
 
 @media (max-width: 768px) {
 
-    .project {
-        margin-bottom: 72px;
+    .title {
+        font-size: 80px;
     }
+
+    .header__para {
+        font-size: 20px;
+    }
+
+    .mail__btn {
+        z-index: 5;
+
+    }
+
+    .modal {
+        top: 120px;
+        left: 0;
+        height: auto;
+        transform: none;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .modal__half {
+        width: 100%;
+        z-index: 10;
+    }
+
+    .modal__about, .modal__contact {
+        border-radius: 0;
+    }
+
+    .modal__half__content {
+        width: 85%;
+        margin: 48px 0;
+    }
+
+    .modal__title {
+        line-height: 1.25;
+        font-size: 24px;
+    }
+
+    .modal__para {
+        line-height: 1.75;
+    }
+
+    .project {
+        margin-bottom: 120px;
+    }
+
+    .project:last-child {
+    margin-bottom: 60px;
+}
 
     .project__description--sub-title,
     .project__description--para,
@@ -780,9 +842,62 @@ footer {
         font-size: 14px;
     }
 
+    footer {
+        z-index: 10;
+    }
+
 }
 
 @media (max-width: 480px) {
+
+    .nav__link:first-child {
+        display: none;
+    }
+
+    .nav__link--list, #personal-logo {
+        margin: 0 20px;
+    }
+
+    .title {
+        font-size: 64px;
+    }
+
+    .header__para {
+        font-size: 18px;
+    }
+
+    .mail__btn {
+        right: 24px;
+    }
+
+    .modal {
+        top: 110px;
+    }
+
+    .exit {
+        right: 30px;
+        top: 42px;
+    }
+
+    .modal__form {
+        align-items: center;
+    }
+
+    .input__title {
+        width: 100%;
+    }
+
+    .form__submit {
+        padding: 16px 40px;
+    }
+
+    .project {
+        margin-bottom: 80px;
+    }
+
+    .project:last-child {
+        margin-bottom: 20px;
+    }
 
     .project__description {
         padding: 0 4%;

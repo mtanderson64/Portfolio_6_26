@@ -19,20 +19,20 @@
         })();
     </script>
 </head>
-<body>
+<body onmousemove="moveBackground(event)">
     <section id="landing-page">
         <nav>
             <figure>
                 <img id="personal-logo" src="./assets/logo.svg" alt="">
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link click">
+                <li class="nav__link click" onClick="toggleModal()">
                     <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">
                         About
                     </a>
                 </li>
                 <li class="nav__link click">
-                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">
+                    <a href="#projects" class="nav__link--anchor link__hover-effect link__hover-effect--black">
                         Projects
                     </a>
                 </li>
@@ -72,13 +72,13 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click" onclick="toggleModal()">
+        <a href="#" class="mail__btn click" onclick="toggleModal()">
             <i class="fa-solid fa-paper-plane"></i>
-        </button>
+        </a>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
-        <div class="modal">
+        <div id="modal" class="modal">
             <div class="modal__half modal__about">
                 <div class="modal__half__content">
                     <p class="modal__title">Here's a bit about me.</p>
@@ -270,11 +270,11 @@
                     link__hover-effect
                     link__hover-effect--white
                 " >LinkedIn</a>
-                <a href="mailto:mtanderson64@gmail.com" target="blank" class="
+                <a href="#" onClick="toggleModal()" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
-                " >Email</a>
+                " >Contact</a>
                 <a href="./assets/anderson_mark_resume.pdf" target="blank" class="
                     footer__social--link
                     link__hover-effect

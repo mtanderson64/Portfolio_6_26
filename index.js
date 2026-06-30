@@ -1,6 +1,64 @@
 let isModalOpen = false
 let contrastToggle = false
 
+const scaleFactor = 1/20
+
+/* function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape")
+    const x = event.clientX * scaleFactor
+    const y = event.clientY * scaleFactor
+
+    for (let i = 0; i < shapes.length; ++i) {
+        const isOdd = i % 2 !== 0
+        const boolInt = isOdd ? -1 : 1
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
+    }
+
+} */
+
+
+// ===== NEW: track target mouse position and current shape positions =====
+let targetX = 0
+let targetY = 0
+const currentPositions = []
+
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape")
+    // ===== CHANGED: store target instead of applying transform directly =====
+    targetX = event.clientX * scaleFactor
+    targetY = event.clientY * scaleFactor
+}
+
+// ===== NEW: animation loop that eases shapes toward the target =====
+function animateBackground() {
+    const shapes = document.querySelectorAll(".shape")
+    const delay = 0.02 // lower = slower/dreamier trailing, higher = snappier
+
+    for (let i = 0; i < shapes.length; ++i) {
+        const isOdd = i % 2 !== 0
+        const boolInt = isOdd ? -1 : 1
+        const goalX = targetX * boolInt
+        const goalY = targetY * boolInt
+
+        if (!currentPositions[i]) {
+            currentPositions[i] = { x: 0, y: 0 }
+        }
+
+        // ===== NEW: lerp current position toward goal =====
+        currentPositions[i].x += (goalX - currentPositions[i].x) * delay
+        currentPositions[i].y += (goalY - currentPositions[i].y) * delay
+
+        shapes[i].style.transform = `translate(${currentPositions[i].x}px, ${currentPositions[i].y}px)`
+    }
+
+    requestAnimationFrame(animateBackground)
+}
+
+// ===== NEW: kick off the loop once =====
+requestAnimationFrame(animateBackground)
+
+
+
 function toggleContrast() {
     contrastToggle = !contrastToggle
     if (contrastToggle) {
